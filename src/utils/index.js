@@ -6,7 +6,7 @@ export default function postedAt(date) {
     const dateDifferentInHours = Math.floor(dateDifferent / (1000 * 3600));
     const dateDifferentInMinutes = Math.floor(dateDifferent / (1000 * 60));
     const dateDifferentInSeconds = Math.floor(dateDifferent / 1000);
-  
+
     if (dateDifferentInDays > 0) {
       return `${Math.floor(dateDifferentInDays)} hari lalu`;
     }
@@ -21,4 +21,3 @@ export default function postedAt(date) {
     }
     return 'baru saja';
   }
-  

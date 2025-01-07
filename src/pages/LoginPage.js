@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link,useNavigate } from 'react-router-dom';
-import { asyncSetAuthUser } from '../states/authUser/action';
+import { Link, useNavigate } from 'react-router-dom';
 import { Grid, Box, CssBaseline, Typography, Container } from '@mui/material';
+import { asyncSetAuthUser } from '../states/authUser/action';
 import LoginInput from '../components/LoginInput';
 
 function LoginPage() {
@@ -35,7 +35,6 @@ function LoginPage() {
         </Box>
       </Container>
     );
-  
 }
 
-export default LoginPage
+export default LoginPage;

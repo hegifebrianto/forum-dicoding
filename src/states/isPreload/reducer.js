@@ -1,4 +1,3 @@
-
 import { ActionType } from './action';
 
 export default function isPreloadReducer(isPreload = true, action = {}) {

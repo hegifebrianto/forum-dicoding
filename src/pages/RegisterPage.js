@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 import RegisterInput from '../components/RegisterInput';
 import { asyncRegisterUser } from '../states/users/action';
 
-
 function RegisterPage() {
     const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -40,4 +39,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage
+export default RegisterPage;

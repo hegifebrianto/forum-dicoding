@@ -10,8 +10,6 @@ export default function asyncPopulateUsersAndThreads() {
       const users = await api.getAllUsers();
       const threads = await api.getAllThreads();
 
-      console.log(threads,'threads');
-
       dispatch(receiveUsersActionCreator(users));
       dispatch(receiveThreadsActionCreator(threads));
       dispatch(hideLoading());

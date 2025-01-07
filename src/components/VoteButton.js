@@ -5,6 +5,7 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
 import Typography from '@mui/material/Typography';
+
 function VoteButton({
     id,
     upVote,
@@ -29,56 +30,53 @@ function VoteButton({
         neturalizeVote(id);
     };
     return (
-        <>
-            {isUpVoted ? (
-                <ThumbUpAltIcon
-                    fontSize="small"
-                    onClick={onNeutralizeVoteClick}
-                    sx={{ cursor: 'pointer' }}
-                />
+      <>
+        {isUpVoted ? (
+          <ThumbUpAltIcon
+            fontSize="small"
+            onClick={onNeutralizeVoteClick}
+            sx={{ cursor: 'pointer' }}
+          />
             ) : (
-                <ThumbUpOffAltIcon
-                    fontSize="small"
-                    onClick={onUpVoteClick}
-                    sx={{ cursor: 'pointer' }}
-                />
+              <ThumbUpOffAltIcon
+                fontSize="small"
+                onClick={onUpVoteClick}
+                sx={{ cursor: 'pointer' }}
+              />
             )}
 
-            <Typography
-                variant="body2"
-                color="text.primary"
-                component="span"
-                sx={{ ml: 0.5 }}
-            >
-                {upVotesBy.length}
-            </Typography>
-            {isDownVoted ? (
-                <ThumbDownAltIcon
-                    fontSize="small"
-                    onClick={onNeutralizeVoteClick}
-                    sx={{ cursor: 'pointer' }}
-                />
+        <Typography
+          variant="body2"
+          color="text.primary"
+          component="span"
+          sx={{ ml: 0.5 }}
+        >
+          {upVotesBy.length}
+        </Typography>
+        {isDownVoted ? (
+          <ThumbDownAltIcon
+            fontSize="small"
+            onClick={onNeutralizeVoteClick}
+            sx={{ cursor: 'pointer' }}
+          />
             ) : (
-                <ThumbDownOffAltIcon
-                    fontSize="small"
-                    onClick={onDownVoteClick}
-                    sx={{ cursor: 'pointer' }}
-                />
+              <ThumbDownOffAltIcon
+                fontSize="small"
+                onClick={onDownVoteClick}
+                sx={{ cursor: 'pointer' }}
+              />
             )}
-            <Typography
-                variant="body2"
-                color="text.primary"
-                component="span"
-                sx={{ ml: 0.5, mr: 1 }}
-            >
-                {downVotesBy.length}
-            </Typography>
-        </>
+        <Typography
+          variant="body2"
+          color="text.primary"
+          component="span"
+          sx={{ ml: 0.5, mr: 1 }}
+        >
+          {downVotesBy.length}
+        </Typography>
+      </>
     );
 }
-
-
-
 
 VoteButton.propTypes = {
     id: PropTypes.string.isRequired,
@@ -90,4 +88,4 @@ VoteButton.propTypes = {
     authUser: PropTypes.string.isRequired,
 };
 
-export default VoteButton
+export default VoteButton;

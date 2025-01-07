@@ -25,8 +25,6 @@ function HomePage() {
   useEffect(() => {
     dispatch(asyncPopulateUsersAndThreads());
   }, [dispatch]);
-  console.log(threads,'thereads');
-
   const onUpVoteThread = (id) => {
     dispatch(asyncUpVoteThread(id));
   };
