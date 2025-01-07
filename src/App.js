@@ -2,10 +2,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import { useEffect } from 'react';
 
+import { Routes, Route } from 'react-router-dom';
 import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 import Loading from './components/Loading';
-import { Routes, Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import Navigation from './components/Navigation';
 import RegisterPage from './pages/RegisterPage';
@@ -14,7 +14,6 @@ import HomePage from './pages/HomePage';
 import AddThreadPage from './pages/AddThreadPage';
 import LeaderboardsPage from './pages/LeaderBoardsPage';
 import DetailPage from './pages/DetailPage';
-
 
 function App() {
   const { isPreload = false, authUser } = useSelector((states) => states);
@@ -32,14 +31,16 @@ function App() {
     return null;
   }
   if (authUser === null) {
-    return (<>
-      <Loading></Loading>
-      <Routes>
-          <Route path='/*' element={<LoginPage></LoginPage>}/>
+    return (
+      <>
+        <Loading />
+        <Routes>
+          <Route path="/*" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
 
-      </Routes>
-    </>)
+        </Routes>
+      </>
+    );
   }
 
   return (
